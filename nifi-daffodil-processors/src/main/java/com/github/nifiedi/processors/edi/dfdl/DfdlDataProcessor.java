@@ -19,7 +19,6 @@ import java.util.List;
  * @date 2025/05/28 20:21
  */
 
-
 public class DfdlDataProcessor {
     private static final Logger LOGGER = LoggerFactory.getLogger(DfdlDataProcessor.class);
     private DataProcessor dataProcessor;
@@ -35,8 +34,6 @@ public class DfdlDataProcessor {
             logDiagnostics(diagnostics);
             throw diagnostics.get(0).getSomeCause();
         }
-
-        this.dataProcessor= dataProcessor;
     }
 
     protected DataProcessor compileSource(URI uri) throws Throwable {
