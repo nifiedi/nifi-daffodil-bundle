@@ -4,15 +4,15 @@
             xmlns:ibmEdiFmt="http://www.ibm.com/dfdl/EDI/Format">
 
     <xsd:import namespace="http://www.ibm.com/dfdl/EDI/Format" schemaLocation="IBM_EDI_Format.xsd"/>
-
     <xsd:annotation>
         <xsd:appinfo source="http://www.ogf.org/dfdl/">
             <dfdl:format ref="ibmEdiFmt:EDIFormat"/>
+			<dfdl:defineVariable name="segmentCounter" type="xsd:int" defaultValue="0"/>
         </xsd:appinfo>
     </xsd:annotation>
-	<xsd:complexType name="typeBEG">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="BEG01" type="Type353" minOccurs="1"/>
+	<xsd:complexType  name="typeBEG">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="BEG01" type="Type353" minOccurs="1"/>
 					<xsd:element name="BEG02" type="Type92" minOccurs="1"/>
 					<xsd:element name="BEG03" type="Type324" minOccurs="1"/>
 					<xsd:element name="BEG04" type="Type328" minOccurs="0"/>
@@ -24,11 +24,12 @@
 					<xsd:element name="BEG10" type="Type1232" minOccurs="0"/>
 					<xsd:element name="BEG11" type="Type786" minOccurs="0"/>
 					<xsd:element name="BEG12" type="Type640" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeCUR">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="CUR01" type="Type98" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeCUR">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="CUR01" type="Type98" minOccurs="1"/>
 					<xsd:element name="CUR02" type="Type100" minOccurs="1"/>
 					<xsd:element name="CUR03" type="Type280" minOccurs="0"/>
 					<xsd:element name="CUR04" type="Type98" minOccurs="0"/>
@@ -49,19 +50,21 @@
 					<xsd:element name="CUR19" type="Type374" minOccurs="0"/>
 					<xsd:element name="CUR20" type="Type373" minOccurs="0"/>
 					<xsd:element name="CUR21" type="Type337" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeREF">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="REF01" type="Type128" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeREF">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="REF01" type="Type128" minOccurs="1"/>
 					<xsd:element name="REF02" type="Type127" minOccurs="0"/>
 					<xsd:element name="REF03" type="Type352" minOccurs="0"/>
 					<xsd:element name="REF04" type="cTypeC040" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePER">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PER01" type="Type366" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePER">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PER01" type="Type366" minOccurs="1"/>
 					<xsd:element name="PER02" type="Type93" minOccurs="0"/>
 					<xsd:element name="PER03" type="Type365" minOccurs="0"/>
 					<xsd:element name="PER04" type="Type364" minOccurs="0"/>
@@ -70,11 +73,12 @@
 					<xsd:element name="PER07" type="Type365" minOccurs="0"/>
 					<xsd:element name="PER08" type="Type364" minOccurs="0"/>
 					<xsd:element name="PER09" type="Type443" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeTAX">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="TAX01" type="Type325" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeTAX">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="TAX01" type="Type325" minOccurs="0"/>
 					<xsd:element name="TAX02" type="Type309" minOccurs="0"/>
 					<xsd:element name="TAX03" type="Type310" minOccurs="0"/>
 					<xsd:element name="TAX04" type="Type309" minOccurs="0"/>
@@ -87,11 +91,12 @@
 					<xsd:element name="TAX11" type="Type310" minOccurs="0"/>
 					<xsd:element name="TAX12" type="Type441" minOccurs="0"/>
 					<xsd:element name="TAX13" type="Type1179" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeFOB">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="FOB01" type="Type146" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeFOB">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="FOB01" type="Type146" minOccurs="1"/>
 					<xsd:element name="FOB02" type="Type309" minOccurs="0"/>
 					<xsd:element name="FOB03" type="Type352" minOccurs="0"/>
 					<xsd:element name="FOB04" type="Type334" minOccurs="0"/>
@@ -100,11 +105,12 @@
 					<xsd:element name="FOB07" type="Type352" minOccurs="0"/>
 					<xsd:element name="FOB08" type="Type54" minOccurs="0"/>
 					<xsd:element name="FOB09" type="Type352" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeCTP">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="CTP01" type="Type687" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeCTP">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="CTP01" type="Type687" minOccurs="0"/>
 					<xsd:element name="CTP02" type="Type236" minOccurs="0"/>
 					<xsd:element name="CTP03" type="Type212" minOccurs="0"/>
 					<xsd:element name="CTP04" type="Type380" minOccurs="0"/>
@@ -115,11 +121,12 @@
 					<xsd:element name="CTP09" type="Type639" minOccurs="0"/>
 					<xsd:element name="CTP10" type="Type499" minOccurs="0"/>
 					<xsd:element name="CTP11" type="Type289" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePAM">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PAM01" type="Type673" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePAM">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PAM01" type="Type673" minOccurs="0"/>
 					<xsd:element name="PAM02" type="Type380" minOccurs="0"/>
 					<xsd:element name="PAM03" type="cTypeC001" minOccurs="0"/>
 					<xsd:element name="PAM04" type="Type522" minOccurs="0"/>
@@ -134,11 +141,12 @@
 					<xsd:element name="PAM13" type="Type1004" minOccurs="0"/>
 					<xsd:element name="PAM14" type="Type954" minOccurs="0"/>
 					<xsd:element name="PAM15" type="Type1073" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeCSH">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="CSH01" type="Type563" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeCSH">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="CSH01" type="Type563" minOccurs="0"/>
 					<xsd:element name="CSH02" type="Type306" minOccurs="0"/>
 					<xsd:element name="CSH03" type="Type610" minOccurs="0"/>
 					<xsd:element name="CSH04" type="Type508" minOccurs="0"/>
@@ -148,17 +156,19 @@
 					<xsd:element name="CSH08" type="Type566" minOccurs="0"/>
 					<xsd:element name="CSH09" type="Type954" minOccurs="0"/>
 					<xsd:element name="CSH10" type="Type1004" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeTC2">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="TC201" type="Type23" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeTC2">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="TC201" type="Type23" minOccurs="1"/>
 					<xsd:element name="TC202" type="Type22" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeITD">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="ITD01" type="Type336" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeITD">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="ITD01" type="Type336" minOccurs="0"/>
 					<xsd:element name="ITD02" type="Type333" minOccurs="0"/>
 					<xsd:element name="ITD03" type="Type338" minOccurs="0"/>
 					<xsd:element name="ITD04" type="Type370" minOccurs="0"/>
@@ -173,48 +183,53 @@
 					<xsd:element name="ITD13" type="Type765" minOccurs="0"/>
 					<xsd:element name="ITD14" type="Type107" minOccurs="0"/>
 					<xsd:element name="ITD15" type="Type954" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeDIS">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="DIS01" type="Type653" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeDIS">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="DIS01" type="Type653" minOccurs="1"/>
 					<xsd:element name="DIS02" type="Type654" minOccurs="1"/>
 					<xsd:element name="DIS03" type="Type655" minOccurs="1"/>
 					<xsd:element name="DIS04" type="Type656" minOccurs="1"/>
 					<xsd:element name="DIS05" type="Type657" minOccurs="1"/>
 					<xsd:element name="DIS06" type="Type657" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeINC">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="INC01" type="Type336" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeINC">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="INC01" type="Type336" minOccurs="1"/>
 					<xsd:element name="INC02" type="cTypeC001" minOccurs="1"/>
 					<xsd:element name="INC03" type="Type380" minOccurs="1"/>
 					<xsd:element name="INC04" type="Type380" minOccurs="1"/>
 					<xsd:element name="INC05" type="Type782" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeDTM">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="DTM01" type="Type374" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeDTM">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="DTM01" type="Type374" minOccurs="1"/>
 					<xsd:element name="DTM02" type="Type373" minOccurs="0"/>
 					<xsd:element name="DTM03" type="Type337" minOccurs="0"/>
 					<xsd:element name="DTM04" type="Type623" minOccurs="0"/>
 					<xsd:element name="DTM05" type="Type1250" minOccurs="0"/>
 					<xsd:element name="DTM06" type="Type1251" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeLDT">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="LDT01" type="Type345" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeLDT">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="LDT01" type="Type345" minOccurs="1"/>
 					<xsd:element name="LDT02" type="Type380" minOccurs="1"/>
 					<xsd:element name="LDT03" type="Type344" minOccurs="1"/>
 					<xsd:element name="LDT04" type="Type373" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeLIN">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="LIN01" type="Type350" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeLIN">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="LIN01" type="Type350" minOccurs="0"/>
 					<xsd:element name="LIN02" type="Type235" minOccurs="1"/>
 					<xsd:element name="LIN03" type="Type234" minOccurs="1"/>
 					<xsd:element name="LIN04" type="Type235" minOccurs="0"/>
@@ -245,11 +260,12 @@
 					<xsd:element name="LIN29" type="Type234" minOccurs="0"/>
 					<xsd:element name="LIN30" type="Type235" minOccurs="0"/>
 					<xsd:element name="LIN31" type="Type234" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeSI">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="SI01" type="Type559" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeSI">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="SI01" type="Type559" minOccurs="1"/>
 					<xsd:element name="SI02" type="Type1000" minOccurs="1"/>
 					<xsd:element name="SI03" type="Type234" minOccurs="1"/>
 					<xsd:element name="SI04" type="Type1000" minOccurs="0"/>
@@ -270,11 +286,12 @@
 					<xsd:element name="SI19" type="Type234" minOccurs="0"/>
 					<xsd:element name="SI20" type="Type1000" minOccurs="0"/>
 					<xsd:element name="SI21" type="Type234" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePID">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PID01" type="Type349" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePID">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PID01" type="Type349" minOccurs="1"/>
 					<xsd:element name="PID02" type="Type750" minOccurs="0"/>
 					<xsd:element name="PID03" type="Type559" minOccurs="0"/>
 					<xsd:element name="PID04" type="Type751" minOccurs="0"/>
@@ -283,11 +300,12 @@
 					<xsd:element name="PID07" type="Type822" minOccurs="0"/>
 					<xsd:element name="PID08" type="Type1073" minOccurs="0"/>
 					<xsd:element name="PID09" type="Type819" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeMEA">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="MEA01" type="Type737" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeMEA">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="MEA01" type="Type737" minOccurs="0"/>
 					<xsd:element name="MEA02" type="Type738" minOccurs="0"/>
 					<xsd:element name="MEA03" type="Type739" minOccurs="0"/>
 					<xsd:element name="MEA04" type="cTypeC001" minOccurs="0"/>
@@ -297,11 +315,12 @@
 					<xsd:element name="MEA08" type="Type936" minOccurs="0"/>
 					<xsd:element name="MEA09" type="Type752" minOccurs="0"/>
 					<xsd:element name="MEA10" type="Type1373" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePWK">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PWK01" type="Type755" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePWK">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PWK01" type="Type755" minOccurs="1"/>
 					<xsd:element name="PWK02" type="Type756" minOccurs="0"/>
 					<xsd:element name="PWK03" type="Type757" minOccurs="0"/>
 					<xsd:element name="PWK04" type="Type98" minOccurs="0"/>
@@ -310,21 +329,23 @@
 					<xsd:element name="PWK07" type="Type352" minOccurs="0"/>
 					<xsd:element name="PWK08" type="cTypeC002" minOccurs="0"/>
 					<xsd:element name="PWK09" type="Type1525" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePKG">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PKG01" type="Type349" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePKG">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PKG01" type="Type349" minOccurs="0"/>
 					<xsd:element name="PKG02" type="Type753" minOccurs="0"/>
 					<xsd:element name="PKG03" type="Type559" minOccurs="0"/>
 					<xsd:element name="PKG04" type="Type754" minOccurs="0"/>
 					<xsd:element name="PKG05" type="Type352" minOccurs="0"/>
 					<xsd:element name="PKG06" type="Type400" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeTD1">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="TD101" type="Type103" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeTD1">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="TD101" type="Type103" minOccurs="0"/>
 					<xsd:element name="TD102" type="Type80" minOccurs="0"/>
 					<xsd:element name="TD103" type="Type23" minOccurs="0"/>
 					<xsd:element name="TD104" type="Type22" minOccurs="0"/>
@@ -334,11 +355,12 @@
 					<xsd:element name="TD108" type="Type355" minOccurs="0"/>
 					<xsd:element name="TD109" type="Type183" minOccurs="0"/>
 					<xsd:element name="TD110" type="Type355" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeTD5">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="TD501" type="Type133" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeTD5">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="TD501" type="Type133" minOccurs="0"/>
 					<xsd:element name="TD502" type="Type66" minOccurs="0"/>
 					<xsd:element name="TD503" type="Type67" minOccurs="0"/>
 					<xsd:element name="TD504" type="Type91" minOccurs="0"/>
@@ -353,11 +375,12 @@
 					<xsd:element name="TD513" type="Type284" minOccurs="0"/>
 					<xsd:element name="TD514" type="Type284" minOccurs="0"/>
 					<xsd:element name="TD515" type="Type26" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeTD3">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="TD301" type="Type40" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeTD3">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="TD301" type="Type40" minOccurs="0"/>
 					<xsd:element name="TD302" type="Type206" minOccurs="0"/>
 					<xsd:element name="TD303" type="Type207" minOccurs="0"/>
 					<xsd:element name="TD304" type="Type187" minOccurs="0"/>
@@ -367,46 +390,51 @@
 					<xsd:element name="TD308" type="Type407" minOccurs="0"/>
 					<xsd:element name="TD309" type="Type225" minOccurs="0"/>
 					<xsd:element name="TD310" type="Type24" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeTD4">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="TD401" type="Type152" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeTD4">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="TD401" type="Type152" minOccurs="0"/>
 					<xsd:element name="TD402" type="Type208" minOccurs="0"/>
 					<xsd:element name="TD403" type="Type209" minOccurs="0"/>
 					<xsd:element name="TD404" type="Type352" minOccurs="0"/>
 					<xsd:element name="TD405" type="Type1073" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeMAN">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="MAN01" type="Type88" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeMAN">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="MAN01" type="Type88" minOccurs="1"/>
 					<xsd:element name="MAN02" type="Type87" minOccurs="1"/>
 					<xsd:element name="MAN03" type="Type87" minOccurs="0"/>
 					<xsd:element name="MAN04" type="Type88" minOccurs="0"/>
 					<xsd:element name="MAN05" type="Type87" minOccurs="0"/>
 					<xsd:element name="MAN06" type="Type87" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePCT">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PCT01" type="Type1004" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePCT">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PCT01" type="Type1004" minOccurs="1"/>
 					<xsd:element name="PCT02" type="Type954" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeCTB">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="CTB01" type="Type688" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeCTB">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="CTB01" type="Type688" minOccurs="1"/>
 					<xsd:element name="CTB02" type="Type352" minOccurs="0"/>
 					<xsd:element name="CTB03" type="Type673" minOccurs="0"/>
 					<xsd:element name="CTB04" type="Type380" minOccurs="0"/>
 					<xsd:element name="CTB05" type="Type522" minOccurs="0"/>
 					<xsd:element name="CTB06" type="Type610" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeTXI">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="TXI01" type="Type963" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeTXI">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="TXI01" type="Type963" minOccurs="1"/>
 					<xsd:element name="TXI02" type="Type782" minOccurs="0"/>
 					<xsd:element name="TXI03" type="Type954" minOccurs="0"/>
 					<xsd:element name="TXI04" type="Type955" minOccurs="0"/>
@@ -416,86 +444,97 @@
 					<xsd:element name="TXI08" type="Type828" minOccurs="0"/>
 					<xsd:element name="TXI09" type="Type325" minOccurs="0"/>
 					<xsd:element name="TXI10" type="Type350" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeFA2">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="FA201" type="Type1196" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeFA2">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="FA201" type="Type1196" minOccurs="1"/>
 					<xsd:element name="FA202" type="Type1195" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeMSG">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="MSG01" type="Type933" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeMSG">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="MSG01" type="Type933" minOccurs="1"/>
 					<xsd:element name="MSG02" type="Type934" minOccurs="0"/>
 					<xsd:element name="MSG03" type="Type1470" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeN2">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="N201" type="Type93" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeN2">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="N201" type="Type93" minOccurs="1"/>
 					<xsd:element name="N202" type="Type93" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeN3">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="N301" type="Type166" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeN3">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="N301" type="Type166" minOccurs="1"/>
 					<xsd:element name="N302" type="Type166" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeN4">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="N401" type="Type19" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeN4">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="N401" type="Type19" minOccurs="0"/>
 					<xsd:element name="N402" type="Type156" minOccurs="0"/>
 					<xsd:element name="N403" type="Type116" minOccurs="0"/>
 					<xsd:element name="N404" type="Type26" minOccurs="0"/>
 					<xsd:element name="N405" type="Type309" minOccurs="0"/>
 					<xsd:element name="N406" type="Type310" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeNX2">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="NX201" type="Type1106" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeNX2">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="NX201" type="Type1106" minOccurs="1"/>
 					<xsd:element name="NX202" type="Type166" minOccurs="1"/>
 					<xsd:element name="NX203" type="Type1096" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeLQ">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="LQ01" type="Type1270" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeLQ">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="LQ01" type="Type1270" minOccurs="0"/>
 					<xsd:element name="LQ02" type="Type1271" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeG61">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="G6101" type="Type366" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeG61">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="G6101" type="Type366" minOccurs="1"/>
 					<xsd:element name="G6102" type="Type93" minOccurs="1"/>
 					<xsd:element name="G6103" type="Type365" minOccurs="0"/>
 					<xsd:element name="G6104" type="Type364" minOccurs="0"/>
 					<xsd:element name="G6105" type="Type443" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeMTX">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="MTX01" type="Type363" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeMTX">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="MTX01" type="Type363" minOccurs="0"/>
 					<xsd:element name="MTX02" type="Type1551" minOccurs="0"/>
 					<xsd:element name="MTX03" type="Type1551" minOccurs="0"/>
 					<xsd:element name="MTX04" type="Type934" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeCN1">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="CN101" type="Type1166" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeCN1">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="CN101" type="Type1166" minOccurs="1"/>
 					<xsd:element name="CN102" type="Type782" minOccurs="0"/>
 					<xsd:element name="CN103" type="Type332" minOccurs="0"/>
 					<xsd:element name="CN104" type="Type127" minOccurs="0"/>
 					<xsd:element name="CN105" type="Type338" minOccurs="0"/>
 					<xsd:element name="CN106" type="Type799" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePO3">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PO301" type="Type371" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePO3">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PO301" type="Type371" minOccurs="1"/>
 					<xsd:element name="PO302" type="Type373" minOccurs="0"/>
 					<xsd:element name="PO303" type="Type236" minOccurs="0"/>
 					<xsd:element name="PO304" type="Type212" minOccurs="0"/>
@@ -503,11 +542,12 @@
 					<xsd:element name="PO306" type="Type380" minOccurs="1"/>
 					<xsd:element name="PO307" type="Type355" minOccurs="1"/>
 					<xsd:element name="PO308" type="Type352" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typePO4">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="PO401" type="Type356" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typePO4">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="PO401" type="Type356" minOccurs="0"/>
 					<xsd:element name="PO402" type="Type357" minOccurs="0"/>
 					<xsd:element name="PO403" type="Type355" minOccurs="0"/>
 					<xsd:element name="PO404" type="Type103" minOccurs="0"/>
@@ -525,11 +565,12 @@
 					<xsd:element name="PO416" type="Type350" minOccurs="0"/>
 					<xsd:element name="PO417" type="Type350" minOccurs="0"/>
 					<xsd:element name="PO418" type="Type1470" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeIT8">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="IT801" type="Type563" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeIT8">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="IT801" type="Type563" minOccurs="0"/>
 					<xsd:element name="IT802" type="Type306" minOccurs="0"/>
 					<xsd:element name="IT803" type="Type610" minOccurs="0"/>
 					<xsd:element name="IT804" type="Type508" minOccurs="0"/>
@@ -556,11 +597,12 @@
 					<xsd:element name="IT825" type="Type234" minOccurs="0"/>
 					<xsd:element name="IT826" type="Type235" minOccurs="0"/>
 					<xsd:element name="IT827" type="Type234" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeSDQ">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="SDQ01" type="Type355" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeSDQ">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="SDQ01" type="Type355" minOccurs="1"/>
 					<xsd:element name="SDQ02" type="Type66" minOccurs="0"/>
 					<xsd:element name="SDQ03" type="Type67" minOccurs="1"/>
 					<xsd:element name="SDQ04" type="Type380" minOccurs="1"/>
@@ -583,20 +625,22 @@
 					<xsd:element name="SDQ21" type="Type67" minOccurs="0"/>
 					<xsd:element name="SDQ22" type="Type380" minOccurs="0"/>
 					<xsd:element name="SDQ23" type="Type310" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeIT3">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="IT301" type="Type382" minOccurs="0"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeIT3">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="IT301" type="Type382" minOccurs="0"/>
 					<xsd:element name="IT302" type="Type355" minOccurs="0"/>
 					<xsd:element name="IT303" type="Type368" minOccurs="0"/>
 					<xsd:element name="IT304" type="Type383" minOccurs="0"/>
 					<xsd:element name="IT305" type="Type371" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeSPI">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="SPI01" type="Type786" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeSPI">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="SPI01" type="Type786" minOccurs="1"/>
 					<xsd:element name="SPI02" type="Type128" minOccurs="0"/>
 					<xsd:element name="SPI03" type="Type127" minOccurs="0"/>
 					<xsd:element name="SPI04" type="Type790" minOccurs="0"/>
@@ -611,29 +655,33 @@
 					<xsd:element name="SPI13" type="Type1322" minOccurs="0"/>
 					<xsd:element name="SPI14" type="Type1401" minOccurs="0"/>
 					<xsd:element name="SPI15" type="Type1005" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeLS">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="LS01" type="Type447" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeQTY">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="QTY01" type="Type673" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeLS">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="LS01" type="Type447" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeQTY">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="QTY01" type="Type673" minOccurs="1"/>
 					<xsd:element name="QTY02" type="Type380" minOccurs="0"/>
 					<xsd:element name="QTY03" type="cTypeC001" minOccurs="0"/>
 					<xsd:element name="QTY04" type="Type61" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeLE">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="LE01" type="Type447" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeSCH">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="SCH01" type="Type380" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeLE">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="LE01" type="Type447" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeSCH">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="SCH01" type="Type380" minOccurs="1"/>
 					<xsd:element name="SCH02" type="Type355" minOccurs="1"/>
 					<xsd:element name="SCH03" type="Type98" minOccurs="0"/>
 					<xsd:element name="SCH04" type="Type93" minOccurs="0"/>
@@ -645,44 +693,57 @@
 					<xsd:element name="SCH10" type="Type337" minOccurs="0"/>
 					<xsd:element name="SCH11" type="Type326" minOccurs="0"/>
 					<xsd:element name="SCH12" type="Type350" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeADV">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="ADV01" type="Type559" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeADV">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="ADV01" type="Type559" minOccurs="1"/>
 					<xsd:element name="ADV02" type="Type1000" minOccurs="1"/>
 					<xsd:element name="ADV03" type="Type740" minOccurs="0"/>
 					<xsd:element name="ADV04" type="Type741" minOccurs="0"/>
 					<xsd:element name="ADV05" type="Type729" minOccurs="0"/>
 					<xsd:element name="ADV06" type="Type1000" minOccurs="0"/>
 					<xsd:element name="ADV07" type="Type739" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeAMT">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="AMT01" type="Type522" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeAMT">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="AMT01" type="Type522" minOccurs="1"/>
 					<xsd:element name="AMT02" type="Type782" minOccurs="1"/>
 					<xsd:element name="AMT03" type="Type478" minOccurs="0"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeSE">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="SE01" type="Type96" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeSE">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 			<xsd:element name="SE01" type="Type96" minOccurs="1" dfdl:outputValueCalc="{$segmentCounter + 1}">
+ 				<xsd:annotation>
+ 					<xsd:appinfo source="http://www.ogf.org/dfdl/">
+ 						<dfdl:assert test="{ xsd:int(.) eq ($segmentCounter + 1) }"
+ 								 message="SE01 (Variable Validation) Failed: The number of segments in the field SE01 does not match the expected calculated number of segments." />
+ 					</xsd:appinfo>
+ 				</xsd:annotation>
+ 			</xsd:element>
 					<xsd:element name="SE02" type="Type329" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeGE">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="GE01" type="Type97" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeGE">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="GE01" type="Type97" minOccurs="1"/>
 					<xsd:element name="GE02" type="Type28" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
-	<xsd:complexType name="typeIEA">
-		<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
-					<xsd:element name="IEA01" type="TypeI16" minOccurs="1"/>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
+	<xsd:complexType  name="typeIEA">
+ 	    <xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
+ 								<xsd:element name="IEA01" type="TypeI16" minOccurs="1"/>
 					<xsd:element name="IEA02" type="TypeI12" minOccurs="1"/>
-		</xsd:sequence>
-	</xsd:complexType>
+
+ 		</xsd:sequence>
+ 	</xsd:complexType>
 	<xsd:complexType  name="typeSAC_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -705,9 +766,18 @@
 					<xsd:element name="SAC16" type="Type819" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
+
+			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeFA1_AMT">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -717,9 +787,18 @@
 					<xsd:element name="FA103" type="Type248" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="FA2" type="typeFA2" dfdl:initiator="FA2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded"/>
+
+			<xsd:element name="FA2" type="typeFA2" dfdl:initiator="FA2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeAMT_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -729,12 +808,40 @@
 					<xsd:element name="AMT03" type="Type478" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="FA1" type="typeFA1_AMT" dfdl:initiator="FA1" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="FA1" type="typeFA1_AMT" dfdl:initiator="FA1" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeN9_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -748,10 +855,25 @@
 					<xsd:element name="N907" type="cTypeC040" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1000"/>
+
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1000">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeN1_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -764,21 +886,102 @@
 					<xsd:element name="N106" type="Type98" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="NX2" type="typeNX2" dfdl:initiator="NX2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="PKG" type="typePKG" dfdl:initiator="PKG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200"/>
+
+			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="NX2" type="typeNX2" dfdl:initiator="NX2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PKG" type="typePKG" dfdl:initiator="PKG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeLM_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -787,9 +990,18 @@
 					<xsd:element name="LM02" type="Type822" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="LQ" type="typeLQ" dfdl:initiator="LQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded"/>
+
+			<xsd:element name="LQ" type="typeLQ" dfdl:initiator="LQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeN1_SPI">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -802,14 +1014,53 @@
 					<xsd:element name="N106" type="Type98" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20"/>
-			<xsd:element name="G61" type="typeG61" dfdl:initiator="G61" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="50"/>
+
+			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="G61" type="typeG61" dfdl:initiator="G61" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="50">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeCB1_SPI">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -818,12 +1069,39 @@
 					<xsd:element name="CB102" type="Type1310" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20"/>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="LDT" type="typeLDT" dfdl:initiator="LDT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="50"/>
+
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LDT" type="typeLDT" dfdl:initiator="LDT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="50">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeSPI_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -845,13 +1123,48 @@
 					<xsd:element name="SPI15" type="Type1005" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="50"/>
-			<xsd:element name="N1" type="typeN1_SPI" dfdl:initiator="N1" minOccurs="0" maxOccurs="20"/>
-			<xsd:element name="CB1" type="typeCB1_SPI" dfdl:initiator="CB1" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="50">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N1" type="typeN1_SPI" dfdl:initiator="N1" minOccurs="0" maxOccurs="20">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CB1" type="typeCB1_SPI" dfdl:initiator="CB1" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeADV_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -865,10 +1178,25 @@
 					<xsd:element name="ADV07" type="Type739" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="MTX" type="typeMTX" dfdl:initiator="MTX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MTX" type="typeMTX" dfdl:initiator="MTX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeCTP_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -886,9 +1214,18 @@
 					<xsd:element name="CTP11" type="Type289" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
+
+			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typePID_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -904,9 +1241,18 @@
 					<xsd:element name="PID09" type="Type819" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
+
+			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeSAC_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -929,10 +1275,25 @@
 					<xsd:element name="SAC16" type="Type819" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
+
+			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeQTY_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -943,9 +1304,18 @@
 					<xsd:element name="QTY04" type="Type61" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeSCH_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -964,13 +1334,46 @@
 					<xsd:element name="SCH12" type="Type350" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typePKG_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -983,9 +1386,18 @@
 					<xsd:element name="PKG06" type="Type400" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeLM_LDT">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -994,9 +1406,18 @@
 					<xsd:element name="LM02" type="Type822" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="LQ" type="typeLQ" dfdl:initiator="LQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded"/>
+
+			<xsd:element name="LQ" type="typeLQ" dfdl:initiator="LQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeLDT_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1007,12 +1428,40 @@
 					<xsd:element name="LDT04" type="Type373" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="QTY" type="typeQTY" dfdl:initiator="QTY" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3"/>
-			<xsd:element name="LM" type="typeLM_LDT" dfdl:initiator="LM" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="QTY" type="typeQTY" dfdl:initiator="QTY" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LM" type="typeLM_LDT" dfdl:initiator="LM" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeN9_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1026,11 +1475,32 @@
 					<xsd:element name="N907" type="cTypeC040" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="40"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1000"/>
+
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="40">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1000">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeLDT_N1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1041,12 +1511,39 @@
 					<xsd:element name="LDT04" type="Type373" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="MAN" type="typeMAN" dfdl:initiator="MAN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="QTY" type="typeQTY" dfdl:initiator="QTY" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3"/>
+
+			<xsd:element name="MAN" type="typeMAN" dfdl:initiator="MAN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="QTY" type="typeQTY" dfdl:initiator="QTY" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeN1_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1059,25 +1556,131 @@
 					<xsd:element name="N106" type="Type98" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="QTY" type="typeQTY" dfdl:initiator="QTY" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="NX2" type="typeNX2" dfdl:initiator="NX2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3"/>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="SCH" type="typeSCH" dfdl:initiator="SCH" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="PKG" type="typePKG" dfdl:initiator="PKG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="LDT" type="typeLDT_N1" dfdl:initiator="LDT" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="QTY" type="typeQTY" dfdl:initiator="QTY" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="NX2" type="typeNX2" dfdl:initiator="NX2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SCH" type="typeSCH" dfdl:initiator="SCH" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PKG" type="typePKG" dfdl:initiator="PKG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LDT" type="typeLDT_N1" dfdl:initiator="LDT" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeN9_SLN">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1091,10 +1694,25 @@
 					<xsd:element name="N907" type="cTypeC040" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeSAC_SLN">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1117,10 +1735,25 @@
 					<xsd:element name="SAC16" type="Type819" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
+
+			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeQTY_SLN">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1131,9 +1764,18 @@
 					<xsd:element name="QTY04" type="Type61" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeN1_SLN">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1146,15 +1788,60 @@
 					<xsd:element name="N106" type="Type98" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="NX2" type="typeNX2" dfdl:initiator="NX2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3"/>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="N2" type="typeN2" dfdl:initiator="N2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N3" type="typeN3" dfdl:initiator="N3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N4" type="typeN4" dfdl:initiator="N4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="NX2" type="typeNX2" dfdl:initiator="NX2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeSLN_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1189,23 +1876,120 @@
 					<xsd:element name="SLN28" type="Type234" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="PID" type="typePID" dfdl:initiator="PID" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1000"/>
-			<xsd:element name="PO3" type="typePO3" dfdl:initiator="PO3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="104"/>
-			<xsd:element name="TC2" type="typeTC2" dfdl:initiator="TC2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="ADV" type="typeADV" dfdl:initiator="ADV" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25"/>
-			<xsd:element name="PAM" type="typePAM" dfdl:initiator="PAM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="PO4" type="typePO4" dfdl:initiator="PO4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="TAX" type="typeTAX" dfdl:initiator="TAX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3"/>
-			<xsd:element name="N9" type="typeN9_SLN" dfdl:initiator="N9" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SAC" type="typeSAC_SLN" dfdl:initiator="SAC" minOccurs="0" maxOccurs="25"/>
-			<xsd:element name="QTY" type="typeQTY_SLN" dfdl:initiator="QTY" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="N1" type="typeN1_SLN" dfdl:initiator="N1" minOccurs="0" maxOccurs="10"/>
+
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PID" type="typePID" dfdl:initiator="PID" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1000">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PO3" type="typePO3" dfdl:initiator="PO3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="104">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TC2" type="typeTC2" dfdl:initiator="TC2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="ADV" type="typeADV" dfdl:initiator="ADV" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PAM" type="typePAM" dfdl:initiator="PAM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PO4" type="typePO4" dfdl:initiator="PO4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TAX" type="typeTAX" dfdl:initiator="TAX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N9" type="typeN9_SLN" dfdl:initiator="N9" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SAC" type="typeSAC_SLN" dfdl:initiator="SAC" minOccurs="0" maxOccurs="25">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="QTY" type="typeQTY_SLN" dfdl:initiator="QTY" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N1" type="typeN1_SLN" dfdl:initiator="N1" minOccurs="0" maxOccurs="10">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeAMT_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1215,10 +1999,25 @@
 					<xsd:element name="AMT03" type="Type478" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeLM_PO1">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1227,9 +2026,18 @@
 					<xsd:element name="LM02" type="Type822" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="LQ" type="typeLQ" dfdl:initiator="LQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded"/>
+
+			<xsd:element name="LQ" type="typeLQ" dfdl:initiator="LQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typePO1_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1261,54 +2069,345 @@
 					<xsd:element name="PO125" type="Type234" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="LIN" type="typeLIN" dfdl:initiator="LIN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="CN1" type="typeCN1" dfdl:initiator="CN1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="PO3" type="typePO3" dfdl:initiator="PO3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25"/>
-			<xsd:element name="CTP" type="typeCTP_PO1" dfdl:initiator="CTP" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="PAM" type="typePAM" dfdl:initiator="PAM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="40"/>
-			<xsd:element name="PID" type="typePID_PO1" dfdl:initiator="PID" minOccurs="0" maxOccurs="1000"/>
-			<xsd:element name="PWK" type="typePWK" dfdl:initiator="PWK" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25"/>
-			<xsd:element name="PO4" type="typePO4" dfdl:initiator="PO4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3"/>
-			<xsd:element name="SAC" type="typeSAC_PO1" dfdl:initiator="SAC" minOccurs="0" maxOccurs="25"/>
-			<xsd:element name="IT8" type="typeIT8" dfdl:initiator="IT8" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="CSH" type="typeCSH" dfdl:initiator="CSH" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="ITD" type="typeITD" dfdl:initiator="ITD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="DIS" type="typeDIS" dfdl:initiator="DIS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20"/>
-			<xsd:element name="INC" type="typeINC" dfdl:initiator="INC" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="TAX" type="typeTAX" dfdl:initiator="TAX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SDQ" type="typeSDQ" dfdl:initiator="SDQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="500"/>
-			<xsd:element name="IT3" type="typeIT3" dfdl:initiator="IT3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="TC2" type="typeTC2" dfdl:initiator="TC2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="MAN" type="typeMAN" dfdl:initiator="MAN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SPI" type="typeSPI" dfdl:initiator="SPI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="TXI" type="typeTXI" dfdl:initiator="TXI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="CTB" type="typeCTB" dfdl:initiator="CTB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="QTY" type="typeQTY_PO1" dfdl:initiator="QTY" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SCH" type="typeSCH_PO1" dfdl:initiator="SCH" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="PKG" type="typePKG_PO1" dfdl:initiator="PKG" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="LS" type="typeLS" dfdl:initiator="LS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="LDT" type="typeLDT_PO1" dfdl:initiator="LDT" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="LE" type="typeLE" dfdl:initiator="LE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="N9" type="typeN9_PO1" dfdl:initiator="N9" minOccurs="0" maxOccurs="1000"/>
-			<xsd:element name="N1" type="typeN1_PO1" dfdl:initiator="N1" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="SLN" type="typeSLN_PO1" dfdl:initiator="SLN" minOccurs="0" maxOccurs="1000"/>
-			<xsd:element name="AMT" type="typeAMT_PO1" dfdl:initiator="AMT" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="LM" type="typeLM_PO1" dfdl:initiator="LM" minOccurs="0" maxOccurs="unbounded"/>
+
+			<xsd:element name="LIN" type="typeLIN" dfdl:initiator="LIN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CN1" type="typeCN1" dfdl:initiator="CN1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PO3" type="typePO3" dfdl:initiator="PO3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTP" type="typeCTP_PO1" dfdl:initiator="CTP" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PAM" type="typePAM" dfdl:initiator="PAM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="40">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PID" type="typePID_PO1" dfdl:initiator="PID" minOccurs="0" maxOccurs="1000">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PWK" type="typePWK" dfdl:initiator="PWK" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PO4" type="typePO4" dfdl:initiator="PO4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SAC" type="typeSAC_PO1" dfdl:initiator="SAC" minOccurs="0" maxOccurs="25">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="IT8" type="typeIT8" dfdl:initiator="IT8" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CSH" type="typeCSH" dfdl:initiator="CSH" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="ITD" type="typeITD" dfdl:initiator="ITD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DIS" type="typeDIS" dfdl:initiator="DIS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="INC" type="typeINC" dfdl:initiator="INC" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TAX" type="typeTAX" dfdl:initiator="TAX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SDQ" type="typeSDQ" dfdl:initiator="SDQ" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="500">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="IT3" type="typeIT3" dfdl:initiator="IT3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TC2" type="typeTC2" dfdl:initiator="TC2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MAN" type="typeMAN" dfdl:initiator="MAN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MSG" type="typeMSG" dfdl:initiator="MSG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SPI" type="typeSPI" dfdl:initiator="SPI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TXI" type="typeTXI" dfdl:initiator="TXI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTB" type="typeCTB" dfdl:initiator="CTB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="QTY" type="typeQTY_PO1" dfdl:initiator="QTY" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SCH" type="typeSCH_PO1" dfdl:initiator="SCH" minOccurs="0" maxOccurs="200">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PKG" type="typePKG_PO1" dfdl:initiator="PKG" minOccurs="0" maxOccurs="200">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LS" type="typeLS" dfdl:initiator="LS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LDT" type="typeLDT_PO1" dfdl:initiator="LDT" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LE" type="typeLE" dfdl:initiator="LE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N9" type="typeN9_PO1" dfdl:initiator="N9" minOccurs="0" maxOccurs="1000">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N1" type="typeN1_PO1" dfdl:initiator="N1" minOccurs="0" maxOccurs="200">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SLN" type="typeSLN_PO1" dfdl:initiator="SLN" minOccurs="0" maxOccurs="1000">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="AMT" type="typeAMT_PO1" dfdl:initiator="AMT" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LM" type="typeLM_PO1" dfdl:initiator="LM" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeCTT_ST">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1322,58 +2421,315 @@
 					<xsd:element name="CTT07" type="Type352" minOccurs="0"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="AMT" type="typeAMT" dfdl:initiator="AMT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
+
+			<xsd:element name="AMT" type="typeAMT" dfdl:initiator="AMT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeST_GS">
-		<xsd:sequence>
+		<xsd:sequence><xsd:annotation>
+
+				<xsd:appinfo source="http://www.ogf.org/dfdl/">
+
+					<dfdl:newVariableInstance ref="segmentCounter" defaultValue="1"/>
+
+				</xsd:appinfo>
+
+			</xsd:annotation>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
 				<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentSequenceFormat">
 					<xsd:element name="ST01" type="Type143" minOccurs="1"/>
 					<xsd:element name="ST02" type="Type329" minOccurs="1"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="BEG" type="typeBEG" dfdl:initiator="BEG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="1"/>
-			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3"/>
-			<xsd:element name="TAX" type="typeTAX" dfdl:initiator="TAX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="PAM" type="typePAM" dfdl:initiator="PAM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="CSH" type="typeCSH" dfdl:initiator="CSH" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="TC2" type="typeTC2" dfdl:initiator="TC2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SAC" type="typeSAC_ST" dfdl:initiator="SAC" minOccurs="0" maxOccurs="25"/>
-			<xsd:element name="ITD" type="typeITD" dfdl:initiator="ITD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="DIS" type="typeDIS" dfdl:initiator="DIS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20"/>
-			<xsd:element name="INC" type="typeINC" dfdl:initiator="INC" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1"/>
-			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="LDT" type="typeLDT" dfdl:initiator="LDT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="LIN" type="typeLIN" dfdl:initiator="LIN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="PID" type="typePID" dfdl:initiator="PID" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="40"/>
-			<xsd:element name="PWK" type="typePWK" dfdl:initiator="PWK" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25"/>
-			<xsd:element name="PKG" type="typePKG" dfdl:initiator="PKG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2"/>
-			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12"/>
-			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="MAN" type="typeMAN" dfdl:initiator="MAN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10"/>
-			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="CTB" type="typeCTB" dfdl:initiator="CTB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5"/>
-			<xsd:element name="TXI" type="typeTXI" dfdl:initiator="TXI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="AMT" type="typeAMT_ST" dfdl:initiator="AMT" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="N9" type="typeN9_ST" dfdl:initiator="N9" minOccurs="0" maxOccurs="1000"/>
-			<xsd:element name="N1" type="typeN1_ST" dfdl:initiator="N1" minOccurs="0" maxOccurs="200"/>
-			<xsd:element name="LM" type="typeLM_ST" dfdl:initiator="LM" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="SPI" type="typeSPI_ST" dfdl:initiator="SPI" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="ADV" type="typeADV_ST" dfdl:initiator="ADV" minOccurs="0" maxOccurs="unbounded"/>
-			<xsd:element name="PO1" type="typePO1_ST" dfdl:initiator="PO1" minOccurs="1" maxOccurs="100000"/>
-			<xsd:element name="CTT" type="typeCTT_ST" dfdl:initiator="CTT" minOccurs="0" maxOccurs="1"/>
+
+			<xsd:element name="BEG" type="typeBEG" dfdl:initiator="BEG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CUR" type="typeCUR" dfdl:initiator="CUR" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="REF" type="typeREF" dfdl:initiator="REF" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PER" type="typePER" dfdl:initiator="PER" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="3">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TAX" type="typeTAX" dfdl:initiator="TAX" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="FOB" type="typeFOB" dfdl:initiator="FOB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTP" type="typeCTP" dfdl:initiator="CTP" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PAM" type="typePAM" dfdl:initiator="PAM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CSH" type="typeCSH" dfdl:initiator="CSH" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TC2" type="typeTC2" dfdl:initiator="TC2" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SAC" type="typeSAC_ST" dfdl:initiator="SAC" minOccurs="0" maxOccurs="25">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="ITD" type="typeITD" dfdl:initiator="ITD" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DIS" type="typeDIS" dfdl:initiator="DIS" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="20">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="INC" type="typeINC" dfdl:initiator="INC" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="DTM" type="typeDTM" dfdl:initiator="DTM" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LDT" type="typeLDT" dfdl:initiator="LDT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LIN" type="typeLIN" dfdl:initiator="LIN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SI" type="typeSI" dfdl:initiator="SI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PID" type="typePID" dfdl:initiator="PID" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MEA" type="typeMEA" dfdl:initiator="MEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="40">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PWK" type="typePWK" dfdl:initiator="PWK" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="25">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PKG" type="typePKG" dfdl:initiator="PKG" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="200">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD1" type="typeTD1" dfdl:initiator="TD1" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="2">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD5" type="typeTD5" dfdl:initiator="TD5" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD3" type="typeTD3" dfdl:initiator="TD3" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="12">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TD4" type="typeTD4" dfdl:initiator="TD4" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="MAN" type="typeMAN" dfdl:initiator="MAN" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="10">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PCT" type="typePCT" dfdl:initiator="PCT" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTB" type="typeCTB" dfdl:initiator="CTB" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="5">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="TXI" type="typeTXI" dfdl:initiator="TXI" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="0" maxOccurs="unbounded">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="AMT" type="typeAMT_ST" dfdl:initiator="AMT" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N9" type="typeN9_ST" dfdl:initiator="N9" minOccurs="0" maxOccurs="1000">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="N1" type="typeN1_ST" dfdl:initiator="N1" minOccurs="0" maxOccurs="200">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="LM" type="typeLM_ST" dfdl:initiator="LM" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="SPI" type="typeSPI_ST" dfdl:initiator="SPI" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="ADV" type="typeADV_ST" dfdl:initiator="ADV" minOccurs="0" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="PO1" type="typePO1_ST" dfdl:initiator="PO1" minOccurs="1" maxOccurs="100000">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="CTT" type="typeCTT_ST" dfdl:initiator="CTT" minOccurs="0" maxOccurs="1">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 			<xsd:element name="SE" type="typeSE" dfdl:initiator="SE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="1"/>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType  name="typeGS_ISA">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1388,11 +2744,34 @@
 					<xsd:element name="GS08" type="Type480" minOccurs="1"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="ST" type="typeST_GS" dfdl:initiator="ST" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element name="GE" type="typeGE" dfdl:initiator="GE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="1"/>
+
+			<xsd:element name="ST" type="typeST_GS" dfdl:initiator="ST" minOccurs="1" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="GE" type="typeGE" dfdl:initiator="GE" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
-	<xsd:element  name="ISA" type="typeISA" dfdl:initiator="ISA"/>
+
+	<xsd:element  name="ISA" type="typeISA" dfdl:initiator="ISA">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 	<xsd:complexType  name="typeISA">
 		<xsd:sequence>
 			<xsd:sequence dfdl:ref="ibmEdiFmt:EDISegmentFormat">
@@ -1415,10 +2794,26 @@
 					<xsd:element name="ISA16" type="TypeI15" minOccurs="1"/>
 				</xsd:sequence>
 			</xsd:sequence>
-			<xsd:element name="GS" type="typeGS_ISA" dfdl:initiator="GS" minOccurs="1" maxOccurs="unbounded"/>
-			<xsd:element name="IEA" type="typeIEA" dfdl:initiator="IEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="1"/>
+
+			<xsd:element name="GS" type="typeGS_ISA" dfdl:initiator="GS" minOccurs="1" maxOccurs="unbounded">
+
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
+			<xsd:element name="IEA" type="typeIEA" dfdl:initiator="IEA" dfdl:ref="ibmEdiFmt:EDISegmentFormat" minOccurs="1" maxOccurs="1">
+	<xsd:annotation>
+	<xsd:appinfo source="http://www.ogf.org/dfdl/">
+		<dfdl:setVariable ref="segmentCounter" value="{$segmentCounter + 1 }"/>
+	</xsd:appinfo>
+</xsd:annotation>
+</xsd:element>
 		</xsd:sequence>
+
 	</xsd:complexType>
+
 	<xsd:complexType name="cTypeC040">
 		<xsd:sequence  dfdl:ref="ibmEdiFmt:EDICompositeSequenceFormat">
 					<xsd:element name="C04001" type="Type128" minOccurs="1"/>

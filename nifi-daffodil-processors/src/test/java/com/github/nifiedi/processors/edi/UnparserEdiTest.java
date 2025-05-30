@@ -29,6 +29,9 @@ public class UnparserEdiTest {
         runner.run();
         List<MockFlowFile> ediString = runner.getFlowFilesForRelationship("success");
         MockFlowFile mockFlowFile = ediString.get(0);
+        String edi = mockFlowFile.getContent();
+        //auto count segment count, json value is 39, must be 41
+        assert "41".equals(edi.substring(1205,1207));
         assert mockFlowFile.getAttribute("mime.type").equals("application/json");
     }
 }

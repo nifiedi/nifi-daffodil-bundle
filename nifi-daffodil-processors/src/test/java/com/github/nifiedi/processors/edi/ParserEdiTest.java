@@ -38,4 +38,20 @@ public class ParserEdiTest {
         assert result.getAttribute("mime.type").equals("application/json");
     }
 
+    @Test
+    public void edi850ToJsonError() {
+        runner.setProperty("EDI_SCHEMA_FILE", "./src/test/resources/X12_4010_850.xsd");
+        runner.setProperty("SEGMENT_TERMINATOR", "~");
+        runner.setProperty("DATA_ELEMENT_SEPARATOR", "*");
+        runner.setProperty("COMPOSITE_ELEMENT_SEPARATOR", "'");
+        runner.setProperty("MEDIA_TYPE", "JSON");
+        Map<String, String> attributes = new HashMap<>();
+        attributes.put("filename", "850.edi");
+        runner.enqueue(this.getClass().getClassLoader().getResourceAsStream("X12_4010_850_WrongTranstCount.edi"), attributes);
+        runner.run();
+        List<MockFlowFile> results = runner.getFlowFilesForRelationship("success");
+        Relationship expectedRel = ParseEdi.REL_FAILURE;
+        runner.assertTransferCount(expectedRel, 1);
+    }
+
 }
