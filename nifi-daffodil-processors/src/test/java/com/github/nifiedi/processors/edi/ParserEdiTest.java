@@ -54,4 +54,23 @@ public class ParserEdiTest {
         runner.assertTransferCount(expectedRel, 1);
     }
 
+    @Test
+    public void desadvToJson() {
+        runner.setProperty("EDI_SCHEMA_FILE", "./src/test/resources/EANCOM_96A_DESADV.xsd");
+        runner.setProperty("SEGMENT_TERMINATOR", "'%WSP*; %NL;%WSP*;");
+        runner.setProperty("DATA_ELEMENT_SEPARATOR", "+");
+        runner.setProperty("COMPOSITE_ELEMENT_SEPARATOR", ":");
+        runner.setProperty("ESCAPE_CHARACTER", "?");
+        runner.setProperty("MEDIA_TYPE", "JSON");
+        Map<String, String> attributes = new HashMap<>();
+        attributes.put("filename", "desadv.edi");
+        runner.enqueue(this.getClass().getClassLoader().getResourceAsStream("EANCOM_96A_DESADV.edi"), attributes);
+        runner.run();
+        List<MockFlowFile> results = runner.getFlowFilesForRelationship("success");
+        Relationship expectedRel = ParseEdi.REL_SUCCESS;
+        runner.assertTransferCount(expectedRel, 1);
+        MockFlowFile result = results.get(0);
+        assert result.getAttribute("mime.type").equals("application/json");
+    }
+
 }
