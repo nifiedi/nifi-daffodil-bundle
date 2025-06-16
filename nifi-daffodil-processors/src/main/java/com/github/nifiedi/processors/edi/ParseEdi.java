@@ -173,7 +173,7 @@ public class ParseEdi extends AbstractProcessor {
                 this.put("{http://www.ibm.com/dfdl/EDI/Format}EscapeChar", context.getProperty(ESCAPE_CHARACTER).getValue());
             }
         }};
-        parser = new DfdlDataProcessor(schemaUri, variables, ValidationMode.valueOf(validationMode),true);
+        parser = new DfdlDataProcessor(schemaUri, variables, ValidationMode.valueOf(validationMode),false);
     }
 
 

@@ -6,6 +6,7 @@ import org.apache.daffodil.japi.io.InputSourceDataInputStream;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.URI;
@@ -24,8 +25,13 @@ public class DfdlDataProcessor {
     private DataProcessor dataProcessor;
 
     public DfdlDataProcessor(URI uri, AbstractMap<String, String> variables, ValidationMode validationMode, boolean reloadFromDisk) throws Throwable {
-        dataProcessor = compileSource(uri);
-        if(variables != null){
+        if (reloadFromDisk) {
+            final File binSchemaFile = new File(uri);
+            dataProcessor = Daffodil.compiler().reload(binSchemaFile);
+        } else {
+            dataProcessor = compileSource(uri);
+        }
+        if(variables != null && variables.size() > 0){
             dataProcessor = dataProcessor.withExternalVariables(variables);
         }
         dataProcessor = dataProcessor.withValidationMode(validationMode);

@@ -194,7 +194,7 @@ public class UnparseEdi extends AbstractProcessor {
         if(ediStandard.equals(EdiStandard.UNEDIFACT)){
             variables.put("{http://www.ibm.com/dfdl/EDI/Format}EscapeChar", escapeCharacter);
         }
-        unParser = new DfdlDataProcessor(schemaUri, variables, ValidationMode.valueOf(validationMode),true);
+        unParser = new DfdlDataProcessor(schemaUri, variables, ValidationMode.valueOf(validationMode),false);
     }
 
 
